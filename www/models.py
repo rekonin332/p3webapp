@@ -1,5 +1,5 @@
 import time,uuid
-from www.orm import Model, StringField, BooleanField, FloatField, TextField
+from orm import Model, StringField, BooleanField, FloatField, TextField
 
 
 # 自增函数

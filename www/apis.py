@@ -3,9 +3,10 @@
 
 __author__ = 'Michael Liao'
 
-'''
+"""
 JSON API definition.
-'''
+"""
+
 
 import json, logging, inspect, functools
 
