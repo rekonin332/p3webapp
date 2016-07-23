@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-import aiomysql
-import logging
 import asyncio
+import logging
 
-__author__ = 'xueqian'
+import aiomysql
+
+__author__ = 'Todd Tse'
 
 
 # 记录操作日志
@@ -40,7 +41,6 @@ def select(sql, args, size=None):
     # args:填入sql的参数,list类型，如['20111101','xue']
     # size:取多少行记录
     log(sql, args)
-    global __pool
     # 从连接池中获取一个连接
     with (yield from __pool) as conn: # with...as...的作用就是try...exception...
         # 打开一个DictCursor，已dict形式返回结果的游标
