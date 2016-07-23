@@ -27,7 +27,7 @@ def merge(default, override):
     for k, v in default.items():
         if k in override:
             if isinstance(v, dict):
-                merge(v, override[k])
+                r[k] = merge(v, override[k])
             else:
                 r[k] = override[k]
         else:

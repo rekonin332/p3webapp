@@ -76,9 +76,7 @@ def test_update(loop):
 # loop = asyncio.get_event_loop()  # 获取消息循环对象
 # loop.run_until_complete(test_save(loop))  # 执行协程
 # loop.close()
-global __pool
 loop = asyncio.get_event_loop()
-loop.run_until_complete(test_update(loop))
-__pool.close()
+loop.run_until_complete(test_save(loop))
 loop.run_until_complete(__pool.wait_closed())
 loop.close()
