@@ -27,14 +27,13 @@ class Leaf(Medium1, Medium2):
 l = Leaf()
 print(Leaf.mro())
 
-__pool = "ffffff"
 def TestGlobal():
     global __pool
     __pool = "sssss"
 
 d = TestGlobal()
-def test():
-    global __pool
+def test():         
+    # global __pool
     print('__pool', __pool)
 
 test()
